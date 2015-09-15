@@ -1,0 +1,74 @@
+{
+	"manifest": "1",
+	"version": "1.0.0",
+	"elements": [{
+		"name": "Simple Table",
+		"path": "files",
+		"version": "1.0.0",
+		"settings": {
+			"config": {
+				"autopop": false
+			},
+			"properties": [{
+				"name": "table",
+				"label": "Table",
+				"type": "group",
+				"properties": [{
+					"name": "rows",
+					"label": "Rows",
+					"type": "int",
+					"default": 3,
+					"min": 1
+				},
+				{
+					"name": "columns",
+					"label": "Columns",
+					"type": "int",
+					"default": 4,
+					"min": 1	
+				}]
+			},
+			{
+				"name": "colors",
+				"label": "Colors",
+				"type": "group",
+				"properties": [{
+					"name": "backgroundColor",
+					"label": "Background color",
+					"type": "color",
+					"default": "#FFFFFF"
+				},
+				{
+					"name": "altColor",
+					"label": "Alternate color",
+					"type": "color",
+					"default": "#F8F8F8"
+				},
+				{
+					"name": "borderColor",
+					"label": "Border color",
+					"type": "color",
+					"default": "#C9CDCF"
+				}]
+			},
+			{
+				"name": "display",
+				"label": "Display",
+				"type": "group",
+				"properties": [{
+					"name": "shading",
+					"label": "Cell shading",
+					"type": "select",
+					"values": ["None", "Top", "Left", "Banded"],
+					"default": "None"
+				},
+				{
+					"name": "alignment",
+					"label": "Alignment",
+					"type": "align",
+					"default": "center"
+				}]
+			}]
+		}
+	}]
+}
