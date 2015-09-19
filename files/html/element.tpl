@@ -1,5 +1,5 @@
 <div class="simple-table-wrapper">
-	<table class="simple-table shading-{{shading}}">
+	<table class="simple-table style-{{style}}">
 		{{#rows_each}}
 			<tr>
 				{{#columns_each}}
