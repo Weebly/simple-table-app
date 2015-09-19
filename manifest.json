@@ -4,7 +4,7 @@
 	"elements": [{
 		"name": "Simple Table",
 		"path": "files",
-		"version": "1.0.0",
+		"version": "1.1.0",
 		"settings": {
 			"config": {
 				"autopop": false
