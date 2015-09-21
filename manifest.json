@@ -1,73 +1,60 @@
 {
 	"manifest": "1",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"elements": [{
 		"name": "Simple Table",
 		"path": "files",
-		"version": "1.0.0",
+		"version": "1.1.0",
 		"settings": {
 			"config": {
 				"autopop": false
 			},
 			"properties": [{
-				"name": "table",
-				"label": "Table",
+				"name": "settings",
+				"label": "Settings",
 				"type": "group",
-				"properties": [{
-					"name": "rows",
-					"label": "Rows",
-					"type": "int",
-					"default": 3,
-					"min": 1
-				},
-				{
-					"name": "columns",
-					"label": "Columns",
-					"type": "int",
-					"default": 4,
-					"min": 1	
-				}]
-			},
-			{
-				"name": "colors",
-				"label": "Colors",
-				"type": "group",
-				"properties": [{
-					"name": "backgroundColor",
-					"label": "Background color",
-					"type": "color",
-					"default": "#FFFFFF"
-				},
-				{
-					"name": "altColor",
-					"label": "Alternate color",
-					"type": "color",
-					"default": "#F8F8F8"
-				},
-				{
-					"name": "borderColor",
-					"label": "Border color",
-					"type": "color",
-					"default": "#C9CDCF"
-				}]
-			},
-			{
-				"name": "display",
-				"label": "Display",
-				"type": "group",
-				"properties": [{
-					"name": "shading",
-					"label": "Cell shading",
-					"type": "select",
-					"values": ["None", "Top", "Left", "Banded"],
-					"default": "None"
-				},
-				{
-					"name": "alignment",
-					"label": "Alignment",
-					"type": "align",
-					"default": "center"
-				}]
+				"properties": [
+					{
+						"name": "columns",
+						"label": "Columns",
+						"type": "int",
+						"default": 4,
+						"step": 1,
+						"min": 1
+					},
+					{
+						"name": "rows",
+						"label": "Rows",
+						"type": "int",
+						"default": 3,
+						"step": 1,
+						"min": 1
+					},
+					{
+						"name": "style",
+						"label": "Style",
+						"type": "select",
+						"values": [{
+							"name": "Basic",
+							"value": "basic"
+						},
+						{
+							"name": "Title on top",
+							"value": "top"
+						},
+						{
+							"name": "Title on side",
+							"value": "side"
+						}],
+						"default": "basic"
+					},
+					{
+						"name": "backgroundColor",
+						"label": "Title Background",
+						"type": "color",
+						"default": "#F8F8F8"
+					}
+				]
 			}]
 		}
 	}]

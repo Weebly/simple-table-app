@@ -4,12 +4,9 @@
 }
 
 .simple-table {
-	@border: 1px solid @borderColor;
-	@fontColor: auto;
-
+	@border: 1px solid #C9CDCF;
 
 	width: 100%;
-	background-color: @backgroundColor;
 	border: @border;
 	border-spacing: 0;
 
@@ -28,32 +25,31 @@
 
 			width: (100% * (1 / @columns));
 
-			/* .paragraphs are the actual editable content */
-			div.paragraph {
-				text-align: @alignment !important;
-				color: @fontColor;
-				width: 90%;
-				margin-left: 5%;
-				padding-bottom: 10px;
-				padding-top: 10px;
+			/* give the content area a bit of breathing room */
+			li.content-area-element {
+				padding: 5px !important;
+			}
+
+			/* and center lone-paragraphs */
+			li.inside.wsite-text:last-child div.paragraph {
+				margin-bottom: 0 !important;
 			}
 		}
 
-		/* shading styles */
-		&.shading-Top tr:first-child td,
-		&.shading-Left td:first-of-type,
-		&.shading-Banded tr:nth-child(even) td:nth-child(odd),
-		&.shading-Banded tr:nth-child(odd) td:nth-child(even) {
-			background-color: @altColor;
+		/* title styles */
+		&.style-top tr:first-child td,
+		&.style-side td:first-of-type {
+			background-color: @backgroundColor;
 		}
 
-		/* if the shadings on the top or left, that means it's a header, so we should probably bold it */
-		&.shading-Top tr:first-child td,
-		&.shading-Left td:first-of-type {
+		/* if the titles on the top or left, that means it's a header, so we should probably bold it */
+		&.style-top tr:first-child td,
+		&.style-side td:first-of-type {
 			.paragraph {
 				font-weight: 700;
 			}
 		}
+
 		/* fenceposting the borders */
 		tr:last-child td {
 			border-bottom: none;
@@ -62,6 +58,11 @@
 		td:last-of-type {
 			border-right: none;
 		}
+	}
+
+	/* centers the empty content */
+	.empty-content-area-element {
+		padding-left: 0px !important;
 	}
 }
 
