@@ -25,13 +25,14 @@
 
 			width: (100% * (1 / @columns));
 
-			/* .paragraphs are the actual editable content */
-			div.paragraph {
-				text-align: @alignment !important;
-				width: 90%;
-				margin: 0 5%;
-				padding-bottom: 10px;
-				padding-top: 10px;
+			/* give the content area a bit of breathing room */
+			li.content-area-element {
+				padding: 5px !important;
+			}
+
+			/* and center lone-paragraphs */
+			li.inside.wsite-text:last-child div.paragraph {
+				margin-bottom: 0 !important;
 			}
 		}
 
@@ -57,6 +58,11 @@
 		td:last-of-type {
 			border-right: none;
 		}
+	}
+
+	/* centers the empty content */
+	.empty-content-area-element {
+		padding-left: 0px !important;
 	}
 }
 
