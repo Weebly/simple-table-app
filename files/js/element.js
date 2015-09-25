@@ -3,9 +3,9 @@
  * @type {PlatformElement}
  */
 (function() {
-	var SimpleTable = PlatformElement.extend({
-		initialize: function() { }
-	});
+    var SimpleTable = PlatformElement.extend({
+        initialize: function() { }
+    });
 
-	return SimpleTable;
+    return SimpleTable;
 })()

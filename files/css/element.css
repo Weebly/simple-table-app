@@ -1,68 +1,68 @@
 /* element.css for the Simple Table element. */
 .simple-table-wrapper {
-	margin: 20px auto;
+    margin: 20px auto;
 }
 
 .simple-table {
-	@border: 1px solid #C9CDCF;
+    @border: 1px solid #C9CDCF;
 
-	width: 100%;
-	border: @border;
-	border-spacing: 0;
+    width: 100%;
+    border: @border;
+    border-spacing: 0;
 
-	.cells();
+    .cells();
 
 
-	
-	/* styles for the cells inside the tables. handles styling the headlines (because those are rendered as regular <td>s, not <th>s)
-	 * intended to the be called from the context of one of the themes. */
-	.cells() {
+    
+    /* styles for the cells inside the tables. handles styling the headlines (because those are rendered as regular <td>s, not <th>s)
+     * intended to the be called from the context of one of the themes. */
+    .cells() {
 
-		td.cell {
-			border-right: @border;
-			border-bottom: @border;
-			word-break: break-word;
+        td.cell {
+            border-right: @border;
+            border-bottom: @border;
+            word-break: break-word;
 
-			width: (100% * (1 / @columns));
+            width: (100% * (1 / @columns));
 
-			/* give the content area a bit of breathing room */
-			li.content-area-element {
-				padding: 5px !important;
-			}
+            /* give the content area a bit of breathing room */
+            li.content-area-element {
+                padding: 5px !important;
+            }
 
-			/* and center lone-paragraphs */
-			li.inside.wsite-text:last-child div.paragraph {
-				margin-bottom: 0 !important;
-			}
-		}
+            /* and center lone-paragraphs */
+            li.inside.wsite-text:last-child div.paragraph {
+                margin-bottom: 0 !important;
+            }
+        }
 
-		/* title styles */
-		&.style-top tr:first-child td,
-		&.style-side td:first-of-type {
-			background-color: @backgroundColor;
-		}
+        /* title styles */
+        &.style-top tr:first-child td,
+        &.style-side td:first-of-type {
+            background-color: @backgroundColor;
+        }
 
-		/* if the titles on the top or left, that means it's a header, so we should probably bold it */
-		&.style-top tr:first-child td,
-		&.style-side td:first-of-type {
-			.paragraph {
-				font-weight: 700;
-			}
-		}
+        /* if the titles on the top or left, that means it's a header, so we should probably bold it */
+        &.style-top tr:first-child td,
+        &.style-side td:first-of-type {
+            .paragraph {
+                font-weight: 700;
+            }
+        }
 
-		/* fenceposting the borders */
-		tr:last-child td {
-			border-bottom: none;
-		}
+        /* fenceposting the borders */
+        tr:last-child td {
+            border-bottom: none;
+        }
 
-		td:last-of-type {
-			border-right: none;
-		}
-	}
+        td:last-of-type {
+            border-right: none;
+        }
+    }
 
-	/* centers the empty content */
-	.empty-content-area-element {
-		padding-left: 0px !important;
-	}
+    /* centers the empty content */
+    .empty-content-area-element {
+        padding-left: 0px !important;
+    }
 }
 
