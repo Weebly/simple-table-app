@@ -1,61 +1,67 @@
 {
-	"manifest": "1",
-	"version": "1.1.0",
-	"elements": [{
-		"name": "Simple Table",
-		"path": "files",
-		"version": "1.1.0",
-		"settings": {
-			"config": {
-				"autopop": false
-			},
-			"properties": [{
-				"name": "settings",
-				"label": "Settings",
-				"type": "group",
-				"properties": [
-					{
-						"name": "columns",
-						"label": "Columns",
-						"type": "int",
-						"default": 4,
-						"step": 1,
-						"min": 1
-					},
-					{
-						"name": "rows",
-						"label": "Rows",
-						"type": "int",
-						"default": 3,
-						"step": 1,
-						"min": 1
-					},
-					{
-						"name": "style",
-						"label": "Style",
-						"type": "select",
-						"values": [{
-							"name": "Basic",
-							"value": "basic"
-						},
-						{
-							"name": "Title on top",
-							"value": "top"
-						},
-						{
-							"name": "Title on side",
-							"value": "side"
-						}],
-						"default": "basic"
-					},
-					{
-						"name": "backgroundColor",
-						"label": "Title Background",
-						"type": "color",
-						"default": "#F8F8F8"
-					}
-				]
-			}]
-		}
-	}]
+  "manifest": "1",
+  "version": "1.1.0",
+  "elements": [
+    {
+      "name": "Simple Table",
+      "path": "files",
+      "version": "1.1.0",
+      "settings": {
+        "config": {
+          "autopop": false
+        },
+        "properties": [
+          {
+            "name": "settings",
+            "label": "Settings",
+            "type": "group",
+            "properties": [
+              {
+                "name": "columns",
+                "label": "Columns",
+                "type": "int",
+                "default": 4,
+                "step": 1,
+                "min": 1
+              },
+              {
+                "name": "rows",
+                "label": "Rows",
+                "type": "int",
+                "default": 3,
+                "step": 1,
+                "min": 1
+              },
+              {
+                "name": "style",
+                "label": "Style",
+                "type": "select",
+                "values": [
+                  {
+                    "name": "Basic",
+                    "value": "basic"
+                  },
+                  {
+                    "name": "Title on top",
+                    "value": "top"
+                  },
+                  {
+                    "name": "Title on side",
+                    "value": "side"
+                  }
+                ],
+                "default": "basic"
+              },
+              {
+                "name": "backgroundColor",
+                "label": "Title Background",
+                "type": "color",
+                "default": "#F8F8F8"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
 }
