@@ -53,10 +53,35 @@
                 "default": "basic"
               },
               {
-                "name": "backgroundColor",
+                "name": "alignment",
+                "label": "Align",
+                "type": "align",
+                "default": "center"
+              }
+            ]
+          },
+          {
+            "name": "advanced",
+            "label": "Advanced",
+            "type": "group",
+            "properties": [
+              {
+                "name": "titleColor",
                 "label": "Title Background",
                 "type": "color",
                 "default": "#F8F8F8"
+              },
+              {
+                "name": "backgroundColor",
+                "label": "Content Background",
+                "type": "color",
+                "default": "#FFFFFF"
+              },
+              {
+                "name": "borderColor",
+                "label": "Border Color",
+                "type": "color",
+                "default": "#C9CDCF"
               }
             ]
           }
