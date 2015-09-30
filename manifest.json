@@ -50,7 +50,7 @@
                     "value": "side"
                   }
                 ],
-                "default": "basic"
+                "default": "top"
               },
               {
                 "name": "alignment",
