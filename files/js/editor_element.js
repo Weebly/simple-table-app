@@ -7,7 +7,6 @@
         // a lot of setup is here; setting the sizes of the columns,
         // normalizing styles, and making the table resizable.
         initialize: function() {
-            this.initSetup = false;
             this.setSizes();
             $.when(
                 $.getScript(this.assets_path + 'colResizable-1.5.min.js')
@@ -22,15 +21,12 @@
          * need to be overwritten.
          */
         fixStyles: function() {
-            if (!this.initSetup) {  // we only want to override styles once.
-                this.initSetup = true;
-                this.$('.element').each(function(index, value) {
-                    // only change their stuff if it's not the default.
-                    if ($(value).text() == 'Value') {
-                        $(value).attr('style', '');
-                    }
-                });
-            }
+            this.$('.element').each(function(index, value) {
+                // only change their stuff if it's not the default.
+                if ($(value).text() == 'Value') {
+                    $(value).attr('style', '');
+                }
+            });
         },
 
         // since there's no good way of handling when all the placeholders have been replaced...
