@@ -1,11 +1,11 @@
 {
   "manifest": "1",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "elements": [
     {
       "name": "Simple Table",
       "path": "files",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "settings": {
         "config": {
           "autopop": false
@@ -82,6 +82,13 @@
                 "label": "Border Color",
                 "type": "color",
                 "default": "#C9CDCF"
+              },
+              {
+                "name": "tableSizes",
+                "label": "Table Sizes",
+                "type": "string",
+                "hidden": "true",
+                "default": "default"
               }
             ]
           }
