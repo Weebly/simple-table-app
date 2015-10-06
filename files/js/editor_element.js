@@ -52,6 +52,7 @@
                     });
                 } else {
                     this.settings.unset('tableSizes');
+                    this.settings.save();
                 }
             }
         },
