@@ -5,23 +5,19 @@
 (function() {
     var SimpleTable = PlatformElement.extend({
         initialize: function() {
-            // we normalize the styles on initial load.
-            $(document).ready(function() {
-                this.fixStyles();
-            }.bind(this));
-
-            this.fixStyles();
+            this.setSizes();
         },
 
-        /**
-         * Lots of styles are applied by default to editable areas of
-         * the editor. To make the element looks how you want, some styles
-         * need to be overwritten.
-         */
-        fixStyles: function() {
-            this.$('.element').each(function(index, value) {
-                $(value).attr('style', '');
-            });
+        setSizes: function() {
+            var sizes = this.settings.get('tableSizes');
+            // if the # of columns isn't the size of the array of lengths, ignore it.
+            if (sizes && sizes != "default" && this.settings.get('columns') == sizes.length) {
+                var columns = this.$('tr').each(function(index, value) {
+                    var cells = $(value).find('td').each(function(index2, value2) {
+                        $(value2).css('width', sizes[index2] + '%');   
+                    });
+                });
+            }
         }
     });
 

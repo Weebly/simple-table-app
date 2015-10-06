@@ -1,6 +1,6 @@
 /* element.css for the Simple Table element. */
 .simple-table-wrapper {
-    margin: 20px auto;
+    padding: 20px 0;
 }
 
 .simple-table {
@@ -39,11 +39,7 @@
         &.style-top tr:first-child td,
         &.style-side td:first-of-type {
             background-color: @titleColor;
-        }
 
-        /* if the titles on the top or left, that means it's a header, so we should probably bold it */
-        &.style-top tr:first-child td,
-        &.style-side td:first-of-type {
             .paragraph {
                 font-weight: 700;
             }
