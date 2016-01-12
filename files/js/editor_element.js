@@ -14,7 +14,8 @@
             $.when(
                 $.getScript(this.assets_path + 'colResizable-1.5.min.js')
             ).done(function() {
-                this.listenForPlaceholderReplacement();      
+                this.fixStyles();
+                this.setUpResizable();
             }.bind(this));
         },
 
@@ -30,18 +31,6 @@
                     $(value).attr('style', '');
                 }
             });
-        },
-
-        // since there's no good way of handling when all the placeholders have been replaced...
-        listenForPlaceholderReplacement: function() {
-            var view = this;
-            this.placeholderTimeout = setInterval(function() {
-                if (this.$('.platform-element-child-placeholder').length === 0) {
-                    this.fixStyles();
-                    this.setUpResizable();
-                    clearInterval(this.placeholderTimeout);
-                }
-            }.bind(this), 100);
         },
 
         // set the sizes for the table
