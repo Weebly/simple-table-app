@@ -1,11 +1,11 @@
 {
   "manifest": "1",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "elements": [
     {
       "name": "Simple Table",
       "path": "files",
-      "version": "1.4.1",
+      "version": "1.4.2",
       "settings": {
         "config": {
           "autopop": false
@@ -93,6 +93,16 @@
             ]
           }
         ]
+      },
+      "tutorial": {
+        "introduction": "Simple Table provides a quick and easy way to organize and display information on your website.",
+        "type": "steps",
+        "content": [
+          "Plan out your table and set up the app accordingly. Click on the element to access settings and adjust the number of rows and columns using the + and - buttons, or by typing directly into the number field.",
+          "Choose a display style and colors. You can set colors for the border, title, and content backgrounds, and change the alignment for the table.",
+          "Add your information to the table. Click into each cell and type or paste your text in. You can modify the look of selected text within the table using the text editing tool bar."
+        ],
+        "autopop": true
       }
     }
   ]
