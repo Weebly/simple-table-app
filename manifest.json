@@ -1,11 +1,11 @@
 {
   "manifest": "1",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "elements": [
     {
       "name": "Simple Table",
       "path": "files",
-      "version": "1.4.2",
+      "version": "1.4.3",
       "settings": {
         "config": {
           "autopop": false
