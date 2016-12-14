@@ -9,6 +9,7 @@
     width: 100%;
     border: @border;
     border-spacing: 0;
+    table-layout: fixed;
 
     .cells();
 
